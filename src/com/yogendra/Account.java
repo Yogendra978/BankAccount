@@ -1,16 +1,18 @@
 package com.yogendra;
 
 public class Account {
-	private String Number;
+	private String Bname;
+	private int Number;
 	private double Balence;
 	private String Name;
 	private String Email; 
-	private String PhoneNumber;
+	private int PhoneNumber;
 	
 	
 	
-	public Account(String number, double balence, String name, String email, String phoneNumber) {
+	public Account(String bname, int number, double balence, String name, String email, int phoneNumber) {
 		super();
+		Bname = bname;
 		Number = number;
 		Balence = balence;
 		Name = name;
@@ -18,14 +20,18 @@ public class Account {
 		PhoneNumber = phoneNumber;
 	}
 	
+	
+	
 	public  void checkBalence() {
 		System.out.println(Balence);
 	}
 	
 	public void userInformation() {
+		System.out.println("Bank of Name :"+Bname);
 		System.out.println("Name :"+Name);
 		System.out.println("Email:"+Email);
 		System.out.println("Acc No:"+Number);
+		System.out.println("Mobile No."+PhoneNumber+"\n");
 		
 	}
 	
@@ -43,10 +49,10 @@ public class Account {
 			System.out.println("Withrow successfull , Current Balence is "+this.Balence);
 		}
 	}
-	public String getNumber() {
+	public int getNumber() {
 		return Number;
 	}
-	public void setNumber(String number) {
+	public void setNumber(int number) {
 		Number = number;
 	}
 	public double getBalence() {
@@ -67,10 +73,10 @@ public class Account {
 	public void setEmail(String email) {
 		Email = email;
 	}
-	public String getPhoneNumber() {
+	public int getPhoneNumber() {
 		return PhoneNumber;
 	}
-	public void setPhoneNumber(String phoneNumber) {
+	public void setPhoneNumber(int phoneNumber) {
 		PhoneNumber = phoneNumber;
 	}
 	
