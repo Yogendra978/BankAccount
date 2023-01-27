@@ -2,7 +2,7 @@ package com.yogendra;
 
 public class Account {
 	private String Bname;
-	private int Number;
+	private int AccountNumber;
 	private double Balence;
 	private String Name;
 	private String Email; 
@@ -13,7 +13,7 @@ public class Account {
 	public Account(String bname, int number, double balence, String name, String email, int phoneNumber) {
 		super();
 		Bname = bname;
-		Number = number;
+		AccountNumber = number;
 		Balence = balence;
 		Name = name;
 		Email = email;
@@ -30,30 +30,56 @@ public class Account {
 		System.out.println("Bank of Name :"+Bname);
 		System.out.println("Name :"+Name);
 		System.out.println("Email:"+Email);
-		System.out.println("Acc No:"+Number);
+		System.out.println("Account No:"+AccountNumber);
 		System.out.println("Mobile No."+PhoneNumber+"\n");
 		
 	}
 	
 	public void DepositMoney(double DepositMoney) {
 		this.Balence+=DepositMoney;
-		System.out.println("Deposite money successfull");
-		System.out.println("your balence is "+this.Balence);
+		System.out.println("Deposite Money Successfull");
+		System.out.println("Your Balence is "+this.Balence);
 	}
 	
 	public void WithdralMoney(double WithdralMoney) {
 		if(this.Balence-WithdralMoney <0) {
-			System.out.println("Withdraw Unsuccessful only "+this.Balence +" is left ");
+			System.out.println("Withdraw Unsuccessful Only "+this.Balence +" is left ");
 		}else {
 			this.Balence-=WithdralMoney;
-			System.out.println("Withrow successfull , Current Balence is "+this.Balence);
+			System.out.println("Withrow Successfull , Current Balence is "+this.Balence);
 		}
 	}
+	
+	
+	public String getBname() {
+		return Bname;
+	}
+
+
+
+	public void setBname(String bname) {
+		Bname = bname;
+	}
+
+
+
+	public int getAccountNumber() {
+		return AccountNumber;
+	}
+
+
+
+	public void setAccountNumber(int accountNumber) {
+		AccountNumber = accountNumber;
+	}
+
+
+
 	public int getNumber() {
-		return Number;
+		return AccountNumber;
 	}
 	public void setNumber(int number) {
-		Number = number;
+		AccountNumber = number;
 	}
 	public double getBalence() {
 		return Balence;
